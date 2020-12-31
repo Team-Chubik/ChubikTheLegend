@@ -21,7 +21,7 @@ func _process(delta):
 		var packet = peerstream.get_packet()
 		var buffer = StreamPeerBuffer.new()
 		buffer.set_data_array(packet)
-		
+		print(packet)
 		var type = buffer.get_u16()
 		print('Recieve %s' % type)
 

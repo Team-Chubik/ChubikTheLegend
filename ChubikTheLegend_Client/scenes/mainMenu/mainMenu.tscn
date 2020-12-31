@@ -192,3 +192,6 @@ margin_right = 286.5
 margin_bottom = 75.0
 custom_fonts/font = SubResource( 3 )
 text = "Log in"
+__meta__ = {
+"_edit_use_anchors_": false
+}

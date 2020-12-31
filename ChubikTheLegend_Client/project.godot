@@ -22,10 +22,15 @@ run/main_scene="res://scenes/mainMenu/mainMenu.tscn"
 
 globals="*res://Globals.gd"
 client="*res://Client.gd"
+Setup="*res://Setup.gd"
 
 [display]
 
 window/size/resizable=false
+
+[locale]
+
+translations=PoolStringArray(  )
 
 [rendering]
 

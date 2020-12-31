@@ -15,5 +15,3 @@ var mainVolume # Hlavní volume
 var effectsVolume # Efekty (výbuchy, stavění, atd.)
 var backgroundMusicVolume # Hlasitost hudby v pozadí
 
-func _nic():
-	print("nic")

@@ -1,0 +1,196 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scenes/Prefabs/Signup/Signup.gd" type="Script" id=1]
+[ext_resource path="res://assets/Fonts/ComfortJKL.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=5]
+size = 65
+extra_spacing_char = 2
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 35
+extra_spacing_char = 2
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 35
+extra_spacing_char = 2
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 35
+extra_spacing_char = 2
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 35
+extra_spacing_char = 2
+font_data = ExtResource( 2 )
+
+[node name="Signup" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.890991
+margin_top = -3.56357
+margin_right = 0.890869
+margin_bottom = -3.5636
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSplitContainer" type="VBoxContainer" parent="."]
+margin_right = 400.0
+margin_bottom = 350.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UpPart" type="VSplitContainer" parent="VSplitContainer"]
+margin_right = 400.0
+margin_bottom = 263.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VSplitContainer/UpPart"]
+margin_right = 400.0
+margin_bottom = 75.0
+custom_fonts/font = SubResource( 5 )
+text = "Sign up"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BottomPart" type="HSplitContainer" parent="VSplitContainer/UpPart"]
+margin_top = 87.0
+margin_right = 400.0
+margin_bottom = 263.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Labels" type="VBoxContainer" parent="VSplitContainer/UpPart/BottomPart"]
+margin_right = 165.0
+margin_bottom = 176.0
+rect_clip_content = true
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UsernameLabel" type="Label" parent="VSplitContainer/UpPart/BottomPart/Labels"]
+margin_right = 165.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 1 )
+text = "Username"
+
+[node name="EmailLabel" type="Label" parent="VSplitContainer/UpPart/BottomPart/Labels"]
+margin_top = 45.0
+margin_right = 165.0
+margin_bottom = 86.0
+custom_fonts/font = SubResource( 2 )
+text = "Email"
+
+[node name="PasswordLabel" type="Label" parent="VSplitContainer/UpPart/BottomPart/Labels"]
+margin_top = 90.0
+margin_right = 165.0
+margin_bottom = 131.0
+custom_fonts/font = SubResource( 3 )
+text = "Password"
+
+[node name="PasswordAgainLabel" type="Label" parent="VSplitContainer/UpPart/BottomPart/Labels"]
+margin_top = 135.0
+margin_right = 165.0
+margin_bottom = 176.0
+custom_fonts/font = SubResource( 4 )
+text = "Password again"
+
+[node name="inputs" type="VBoxContainer" parent="VSplitContainer/UpPart/BottomPart"]
+margin_left = 177.0
+margin_right = 400.0
+margin_bottom = 176.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Username" type="LineEdit" parent="VSplitContainer/UpPart/BottomPart/inputs"]
+margin_top = 14.0
+margin_right = 223.0
+margin_bottom = 38.0
+
+[node name="Control" type="Control" parent="VSplitContainer/UpPart/BottomPart/inputs"]
+margin_top = 42.0
+margin_right = 223.0
+margin_bottom = 42.0
+
+[node name="Control2" type="Control" parent="VSplitContainer/UpPart/BottomPart/inputs"]
+margin_top = 46.0
+margin_right = 223.0
+margin_bottom = 46.0
+
+[node name="Control9" type="Control" parent="VSplitContainer/UpPart/BottomPart/inputs"]
+margin_top = 50.0
+margin_right = 223.0
+margin_bottom = 50.0
+
+[node name="Email" type="LineEdit" parent="VSplitContainer/UpPart/BottomPart/inputs"]
+margin_top = 54.0
+margin_right = 223.0
+margin_bottom = 78.0
+
+[node name="Control3" type="Control" parent="VSplitContainer/UpPart/BottomPart/inputs"]
+margin_top = 82.0
+margin_right = 223.0
+margin_bottom = 82.0
+
+[node name="Control5" type="Control" parent="VSplitContainer/UpPart/BottomPart/inputs"]
+margin_top = 86.0
+margin_right = 223.0
+margin_bottom = 86.0
+
+[node name="Control8" type="Control" parent="VSplitContainer/UpPart/BottomPart/inputs"]
+margin_top = 90.0
+margin_right = 223.0
+margin_bottom = 90.0
+
+[node name="Password" type="LineEdit" parent="VSplitContainer/UpPart/BottomPart/inputs"]
+margin_top = 94.0
+margin_right = 223.0
+margin_bottom = 118.0
+secret = true
+
+[node name="Control4" type="Control" parent="VSplitContainer/UpPart/BottomPart/inputs"]
+margin_top = 122.0
+margin_right = 223.0
+margin_bottom = 122.0
+
+[node name="Control6" type="Control" parent="VSplitContainer/UpPart/BottomPart/inputs"]
+margin_top = 126.0
+margin_right = 223.0
+margin_bottom = 126.0
+
+[node name="Control7" type="Control" parent="VSplitContainer/UpPart/BottomPart/inputs"]
+margin_top = 130.0
+margin_right = 223.0
+margin_bottom = 130.0
+
+[node name="Control10" type="Control" parent="VSplitContainer/UpPart/BottomPart/inputs"]
+margin_top = 134.0
+margin_right = 223.0
+margin_bottom = 134.0
+
+[node name="PasswordAgain" type="LineEdit" parent="VSplitContainer/UpPart/BottomPart/inputs"]
+margin_top = 138.0
+margin_right = 223.0
+margin_bottom = 162.0
+secret = true
+
+[node name="Button" type="Button" parent="VSplitContainer"]
+margin_top = 267.0
+margin_right = 400.0
+margin_bottom = 287.0
+text = "Sign up"

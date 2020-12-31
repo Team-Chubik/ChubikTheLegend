@@ -2,7 +2,7 @@ extends Node
 
 # vytvoření proměnných
 # connection => uchovává informace o spojení
-# peerstream => proud packetů se serverem§
+# peerstream => proud packetů se serverem
 # received => vyšle signál když přijme TCP packet
 var connection = null
 var peerstream = null
@@ -15,9 +15,6 @@ func _ready():
 		connection.connect_to_host("127.0.0.1", 9090)
 		peerstream = PacketPeerStream.new()
 		peerstream.set_stream_peer(connection)
-		send_code(1002)
-		send_string("Hello")
-		send_combined(1001,"Hello")
 
 func _process(_delta):
 	if peerstream.get_available_packet_count() > 0 :

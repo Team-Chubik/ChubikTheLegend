@@ -15,17 +15,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Chubik The Legend"
-run/main_scene="res://scenes/mainMenu/mainMenu.tscn"
-
-[autoload]
-
-Client="*res://Client.gd"
-Globals="*res://Globals.gd"
-
-[display]
-
-window/size/resizable=false
+config/name="CTL Server"
+config/icon="res://icon.png"
 
 [rendering]
 

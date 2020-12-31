@@ -20,8 +20,8 @@ run/main_scene="res://scenes/mainMenu/mainMenu.tscn"
 
 [autoload]
 
-Client="*res://Client.gd"
-Globals="*res://Globals.gd"
+globals="*res://Globals.gd"
+client="*res://Client.gd"
 
 [display]
 

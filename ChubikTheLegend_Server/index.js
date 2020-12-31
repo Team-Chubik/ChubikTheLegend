@@ -9,7 +9,7 @@ const tcpSplit = new StreamTcp()
 let server = net.createServer((socket) => {
   let uuid = v4()
 
-  console.log(`[${uuid}] Connected`);
+  console.log(`[${uuid}] >> Connected`);
 
   // send is uuid
   const uuidPacketID = putU16(1)
@@ -20,11 +20,12 @@ let server = net.createServer((socket) => {
   const toSend = Buffer.concat([lengthBuffer, uuidPacketID, uuidPacketData])
 
   socket.write(toSend)
+  socket.write
 
   socket.pipe(tcpSplit).on('data', (data) => {
     let recieve = new Buffer.from(data)
 
-    const type = getU16(recieve)
+    const type = (recieve)
 
     console.log(`[${uuid}] << Recieve packet code`, type.value)
     if (process.hasOwnProperty(type.value)) {
@@ -36,10 +37,10 @@ let server = net.createServer((socket) => {
   })
 
   socket.on('end', () => {
-    console.log('Bye :(')
+    console.log(`[${uuid}] >> Disconnected`)
   })
   socket.on('error', () => {
-    console.log('Bye :(')
+    console.log(`[${uuid}] >> Disconnected due to error`)
   })
 })
 

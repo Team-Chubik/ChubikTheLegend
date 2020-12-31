@@ -1,0 +1,91 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/Prefabs/Login/Login.gd" type="Script" id=1]
+[ext_resource path="res://assets/Fonts/ComfortJKL.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 65
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 35
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 35
+font_data = ExtResource( 2 )
+
+[node name="Login" type="Control"]
+margin_left = 1.54987
+margin_top = -0.803101
+margin_right = 201.55
+margin_bottom = 424.197
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Error" type="Label" parent="."]
+margin_left = 0.790512
+margin_top = 363.496
+margin_right = 200.791
+margin_bottom = 413.496
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Username" type="LineEdit" parent="."]
+margin_top = 150.0
+margin_right = 200.0
+margin_bottom = 175.0
+max_length = 16
+
+[node name="Password" type="LineEdit" parent="."]
+margin_top = 250.0
+margin_right = 200.0
+margin_bottom = 275.0
+secret = true
+secret_character = "●"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Login" type="Label" parent="."]
+margin_left = 50.0
+margin_right = 150.0
+margin_bottom = 75.0
+custom_fonts/font = SubResource( 1 )
+text = "Log in"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UsernameLabel" type="Label" parent="."]
+margin_left = 50.0
+margin_top = 100.0
+margin_right = 150.0
+margin_bottom = 141.0
+custom_fonts/font = SubResource( 2 )
+text = "Username"
+align = 1
+
+[node name="PasswordLabel" type="Label" parent="."]
+margin_left = 50.0
+margin_top = 200.0
+margin_right = 150.0
+margin_bottom = 241.0
+custom_fonts/font = SubResource( 3 )
+text = "Password"
+align = 1
+
+[node name="LoginButton" type="Button" parent="."]
+margin_left = 50.0
+margin_top = 300.0
+margin_right = 150.0
+margin_bottom = 350.0
+text = "Log in"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="LoginButton" to="." method="_on_LoginButton_pressed"]

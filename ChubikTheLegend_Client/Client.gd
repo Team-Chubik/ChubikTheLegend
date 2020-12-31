@@ -15,20 +15,24 @@ func _ready():
 		connection.connect_to_host("127.0.0.1", 9090)
 		peerstream = PacketPeerStream.new()
 		peerstream.set_stream_peer(connection)
+		send_code(1002)
+		send_string("Hello")
+		send_combined(1001,"Hello")
 
-func _process(delta):
+func _process(_delta):
 	if peerstream.get_available_packet_count() > 0 :
 		var packet = peerstream.get_packet()
 		var buffer = StreamPeerBuffer.new()
 		buffer.set_data_array(packet)
-		print(packet)
 		var type = buffer.get_u16()
 		print('Recieve %s' % type)
+		var length = buffer.get_u32()
+		print("My id is %s !" % buffer.get_string(length))
 
 # Funkce na posílání u16 [0 - 65 535] kódů
 func send_code(code):
 	var buffer = StreamPeerBuffer.new()
-	buffer.put_16(code)
+	buffer.put_u16(code)
 	peerstream.put_packet(buffer.get_data_array())
 
 # Funkce na posílání stringů
@@ -40,7 +44,7 @@ func send_string(string):
 # Funkce na posílání kombinovaných packetů
 func send_combined(code,string):
 	var buffer = StreamPeerBuffer.new()
-	buffer.put_16(code)
+	buffer.put_u16(code)
 	buffer.put_string(string)
 	peerstream.put_packet(buffer.get_data_array())
 

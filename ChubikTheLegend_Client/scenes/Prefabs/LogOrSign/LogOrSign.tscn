@@ -1,0 +1,74 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/Prefabs/Login/Login.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Prefabs/Signup/Signup.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/Fonts/ComfortJKL.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://scenes/Prefabs/LogOrSign/LogOrSign.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 35
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 35
+font_data = ExtResource( 3 )
+
+[node name="LogOrSign" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_top = 1.0
+margin_right = -608.0
+margin_bottom = -249.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Login" parent="." instance=ExtResource( 1 )]
+visible = false
+margin_top = -2.5968
+margin_bottom = 422.403
+
+[node name="Signup" parent="." instance=ExtResource( 2 )]
+visible = false
+margin_left = 1.76001
+margin_top = 2.02086
+margin_right = -530.24
+margin_bottom = -299.979
+
+[node name="Buttons" type="HSplitContainer" parent="."]
+margin_left = 127.5
+margin_top = 120.0
+margin_right = 287.5
+margin_bottom = 170.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HaveAccount" type="Button" parent="Buttons"]
+margin_right = 67.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 1 )
+text = "Log In"
+
+[node name="DontHaveAccount" type="Button" parent="Buttons"]
+margin_left = 79.0
+margin_right = 160.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 1 )
+text = "Sign up"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Button" parent="."]
+visible = false
+margin_left = 359.0
+margin_right = 415.0
+margin_bottom = 47.0
+custom_fonts/font = SubResource( 2 )
+text = "Back"
+[connection signal="pressed" from="Buttons/HaveAccount" to="." method="_on_HaveAccount_pressed"]
+[connection signal="pressed" from="Buttons/DontHaveAccount" to="." method="_on_DontHaveAccount_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]

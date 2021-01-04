@@ -17,6 +17,8 @@ _global_script_class_icons={
 
 config/name="Chubik The Legend"
 run/main_scene="res://scenes/mainMenu/mainMenu.tscn"
+config/icon="res://assets/Images/icon.png"
+config/windows_native_icon="res://assets/Images/icon.ico"
 
 [autoload]
 

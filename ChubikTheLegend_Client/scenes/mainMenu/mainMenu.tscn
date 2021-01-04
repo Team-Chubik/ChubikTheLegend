@@ -3,8 +3,8 @@
 [ext_resource path="res://assets/Images/background.png" type="Texture" id=1]
 [ext_resource path="res://assets/Fonts/Artypa.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/Fonts/ComfortJKL.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://scenes/Prefabs/Login/Login.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/Prefabs/Signup/Signup.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Prefabs/LogOrSign/LogOrSign.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/mainMenu/Credits.gd" type="Script" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 60
@@ -25,11 +25,22 @@ position = Vector2( 512.837, 299.67 )
 scale = Vector2( 1.575, 1.22495 )
 texture = ExtResource( 1 )
 
+[node name="Title" type="Label" parent="."]
+margin_right = 1026.0
+margin_bottom = 107.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Chubik The Legend"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Changelog" type="RichTextLabel" parent="."]
 margin_left = 10.0
-margin_top = 150.0
+margin_top = 149.293
 margin_right = 340.0
-margin_bottom = 590.0
+margin_bottom = 589.293
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dignissim et velit a interdum. Mauris non enim eget nisi tristique sollicitudin non vitae risus. Vestibulum quis felis diam. Sed vitae mattis magna, vel molestie est. Aliquam scelerisque, enim sit amet fringilla molestie, ipsum neque efficitur nulla, nec feugiat leo velit et nisl. Suspendisse vel molestie est. Nullam facilisis, odio id facilisis hendrerit, elit libero feugiat est, eget placerat nunc massa sed metus. In vestibulum massa ac sapien semper, vitae venenatis metus commodo. Etiam bibendum velit luctus vulputate aliquet. Ut venenatis est in diam finibus venenatis. Vivamus venenatis ante dolor, non interdum risus tempus suscipit. In porttitor lobortis sapien at fringilla. Nam sagittis ipsum quis gravida porttitor.
 
 Vestibulum at ornare justo. Suspendisse ornare scelerisque quam nec euismod. Suspendisse consectetur nibh quis sapien elementum, quis bibendum quam accumsan. Nunc eu hendrerit leo, vel interdum nulla. Nulla facilisi. Phasellus iaculis ligula lacus, non pretium ipsum venenatis non. Suspendisse tortor orci, blandit id sollicitudin at, tempus at ex. Nunc ornare quam sapien, id fermentum arcu faucibus non. Maecenas scelerisque, enim id accumsan luctus, lacus quam varius justo, a vestibulum lorem leo ac velit. Nulla id enim et lorem condimentum ultrices congue sollicitudin est. Integer ac nisi sed lectus iaculis laoreet ut ac purus.
@@ -133,17 +144,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Title" type="Label" parent="."]
-margin_right = 1026.0
-margin_bottom = 107.0
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Chubik The Legend"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="ChangelogTitle" type="Label" parent="."]
 margin_left = 10.0
 margin_top = 76.0
@@ -157,14 +157,68 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Login" parent="." instance=ExtResource( 4 )]
-margin_left = 350.778
-margin_top = 150.0
-margin_right = 550.778
-margin_bottom = 578.969
+[node name="LogOrSign" parent="." instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 345.137
+margin_top = 150.293
+margin_right = 760.137
+margin_bottom = 500.293
 
-[node name="Signup" parent="." instance=ExtResource( 5 )]
-margin_left = 577.638
-margin_top = 150.0
-margin_right = 577.638
-margin_bottom = 150.0
+[node name="Credits" type="RichTextLabel" parent="."]
+margin_left = 760.0
+margin_top = 148.349
+margin_right = 1010.0
+margin_bottom = 588.349
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "[center][color=red]Blboun[/color][/center]
+[center][color=black]Main developer[/color][/center] 
+[color=blue][center][url=,https://github.com/Blboun3]Github[/url][/center][/color] 
+[color=blue][center][url=,https://discord.com/users/573080354567487499]Discord[/url][/center][/color]
+[color=blue][center][url=,https://www.twitch.tv/tucniklinux]Twitch[/url][/center][/color] 
+
+[center][color=red]Vagabe[/color][/center]
+[center][color=black]Main designer[/color][/center]
+[color=blue][center][url=,https://github.com/Vagabe]Github[/url][/center][/color] 
+
+[center][color=red]Neonflame[/color][/center]
+[center][color=black]Graphics designer[/color][/center] 
+[color=blue][center][url=,https://github.com/NeonflameCZ]Github[/url][/center][/color] 
+[color=blue][center][url=,https://discord.com/users/422495285789327372]Discord[/url][/center][/color]
+[color=blue][center][url=,https://www.youtube.com/channel/UC7oj3oFxp4C4AFuVlDpSeEg]Youtube[/url][/center][/color] "
+text = "Blboun
+Main developer 
+Github 
+Discord
+Twitch 
+
+Vagabe
+Main designer
+Github 
+
+Neonflame
+Graphics designer 
+Github 
+Discord
+Youtube "
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreditsTitle" type="Label" parent="."]
+margin_left = 760.0
+margin_top = 76.0
+margin_right = 1010.0
+margin_bottom = 151.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Credits"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

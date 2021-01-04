@@ -3,27 +3,27 @@
 [ext_resource path="res://scenes/Prefabs/Signup/Signup.gd" type="Script" id=1]
 [ext_resource path="res://assets/Fonts/ComfortJKL.ttf" type="DynamicFontData" id=2]
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=6]
 size = 65
 extra_spacing_char = 2
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=7]
 size = 35
 extra_spacing_char = 2
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=8]
 size = 35
 extra_spacing_char = 2
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=9]
 size = 35
 extra_spacing_char = 2
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=5]
 size = 35
 extra_spacing_char = 2
 font_data = ExtResource( 2 )
@@ -31,10 +31,10 @@ font_data = ExtResource( 2 )
 [node name="Signup" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 0.890991
-margin_top = -3.56357
-margin_right = 0.890869
-margin_bottom = -3.5636
+margin_left = 1.0
+margin_top = -4.0
+margin_right = -623.0
+margin_bottom = -254.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -57,7 +57,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="VSplitContainer/UpPart"]
 margin_right = 400.0
 margin_bottom = 75.0
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 text = "Sign up"
 align = 1
 __meta__ = {
@@ -84,28 +84,28 @@ __meta__ = {
 [node name="UsernameLabel" type="Label" parent="VSplitContainer/UpPart/BottomPart/Labels"]
 margin_right = 165.0
 margin_bottom = 41.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 7 )
 text = "Username"
 
 [node name="EmailLabel" type="Label" parent="VSplitContainer/UpPart/BottomPart/Labels"]
 margin_top = 45.0
 margin_right = 165.0
 margin_bottom = 86.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 8 )
 text = "Email"
 
 [node name="PasswordLabel" type="Label" parent="VSplitContainer/UpPart/BottomPart/Labels"]
 margin_top = 90.0
 margin_right = 165.0
 margin_bottom = 131.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 9 )
 text = "Password"
 
 [node name="PasswordAgainLabel" type="Label" parent="VSplitContainer/UpPart/BottomPart/Labels"]
 margin_top = 135.0
 margin_right = 165.0
 margin_bottom = 176.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 text = "Password again"
 
 [node name="inputs" type="VBoxContainer" parent="VSplitContainer/UpPart/BottomPart"]
@@ -194,3 +194,11 @@ margin_top = 267.0
 margin_right = 400.0
 margin_bottom = 287.0
 text = "Sign up"
+
+[node name="Error" type="Label" parent="VSplitContainer"]
+margin_top = 291.0
+margin_right = 400.0
+margin_bottom = 305.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+align = 1
+[connection signal="pressed" from="VSplitContainer/Button" to="." method="_on_Button_pressed"]
